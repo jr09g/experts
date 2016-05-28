@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Thesis:</strong>
+  <%= @rebuttal.thesis %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @rebuttal.body %>
+</p>
+
+<%= link_to 'Edit', edit_rebuttal_path(@rebuttal) %> |
+<%= link_to 'Back', rebuttals_path %>

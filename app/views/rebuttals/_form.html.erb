@@ -1,0 +1,25 @@
+<%= form_for(@rebuttal) do |f| %>
+  <% if @rebuttal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rebuttal.errors.count, "error") %> prohibited this rebuttal from being saved:</h2>
+
+      <ul>
+      <% @rebuttal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :thesis %><br>
+    <%= f.text_field :thesis %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

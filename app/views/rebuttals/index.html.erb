@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rebuttals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Thesis</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rebuttals.each do |rebuttal| %>
+      <tr>
+        <td><%= rebuttal.thesis %></td>
+        <td><%= rebuttal.body %></td>
+        <td><%= link_to 'Show', rebuttal %></td>
+        <td><%= link_to 'Edit', edit_rebuttal_path(rebuttal) %></td>
+        <td><%= link_to 'Destroy', rebuttal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rebuttal', new_rebuttal_path %>

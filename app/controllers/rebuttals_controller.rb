@@ -1,6 +1,6 @@
 class RebuttalsController < ApplicationController
   before_action :set_rebuttal, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_expert!
+  #before_action :authenticate_expert!
 
   # GET /rebuttals
   # GET /rebuttals.json
